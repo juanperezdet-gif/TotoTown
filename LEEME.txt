@@ -1,8 +1,13 @@
-PÁPALOS · SIMULADOR V7 INSTALABLE · REGISTRO-1 · 7 NOV 2026
+PÁPALOS · SIMULADOR V7 INSTALABLE · TABLETA COMPACTA-1 · 7 NOV 2026
 Copia independiente de capacitación con datos ficticios.
 No es la aplicación operativa ni el TEST integrado.
 
-QUÉ CAMBIÓ EN ESTA COPIA · REGISTRO-1
+NUEVO · CABECERA COMPACTA PARA TABLETA
+Los siete módulos ahora se muestran en una sola fila horizontal debajo de los logos compactos. Los botones mantienen un mínimo de 48 × 48 px y no se encogen ni parten sus nombres. Si no caben, desliza la barra hacia los lados; en pantallas de hasta 1100 px aparece una indicación. El botón del módulo activo queda visible dentro de esa barra sin llevar la página hacia arriba.
+Se retiró el efecto de la regla anterior que ponía los siete botones en columna a partir de 901 px. La cabecera también se adapta a teléfono y no se imprime en las notas.
+Esto es una adaptación del simulador solicitada para capacitación. Los paquetes S27/S29 inspeccionados no traen una hoja de estilos de cabecera comparable; no se afirma que la aplicación operativa use esta misma barra.
+
+CAMPOS DE PRÁCTICA CONSERVADOS · REGISTRO-1
 Esta entrega añade cuatro casillas opcionales en Registro: teléfono ficticio y correo ficticio del adulto, y fecha de nacimiento ficticia de cada menor. Empiezan vacías. Guarda con «Guardar datos ficticios» después de confirmar que todos los datos son inventados. Se conservan sólo en memoria de esta práctica y se borran al reiniciar o recargar.
 - Teléfono: TEL-FICTICIO-001 u otro identificador TEL-FICTICIO- seguido de letras, números o guiones, hasta 64 bytes. No acepta un número real.
 - Correo: visita@example.invalid u otro correo terminado en .invalid, hasta 254 bytes. No acepta dominios reales.
@@ -19,7 +24,7 @@ En Ingreso, al elegir CARE aparece «Adulto alternativo que podría recoger · n
 Se guardan para esa visita de práctica. En Retiro siguen apareciendo con «Autorización no establecida». Son una declaración informativa; no designan realmente a otro adulto ni modifican al responsable fijo, las verificaciones de retiro o una responsiva. El parentesco declarado no es un parentesco comprobado.
 
 QUÉ SE CONSERVÓ
-Se mantiene instalación standalone, manifest, iconos y rutas relativas. El motor de cálculo, catálogo, 66 productos, precios, estilos y los 67 archivos originales de imágenes no cambiaron. Se modificó la interfaz de Registro, la etiqueta CARE y la condición de lectura para Ingreso. El hash permitido por la política de contenido se actualizó para el script final exacto.
+Se mantiene instalación standalone, manifest, iconos y rutas relativas. El motor de cálculo, catálogo, 66 productos, precios y los 67 archivos originales de imágenes no cambiaron. Se añadieron estilos de cabecera para pantalla, sin modificar estilos de impresión. Se conservan la interfaz de Registro, la etiqueta CARE y la condición de lectura para Ingreso de REGISTRO-1. El cambio nuevo sólo afecta a la presentación de la cabecera y al desplazamiento horizontal para mostrar el módulo activo. El hash permitido por la política de contenido se actualizó para el script final exacto.
 Las conexiones de datos continúan bloqueadas. No se añadieron service workers, cuentas, almacenamiento duradero del ejercicio, permisos del dispositivo ni conexión a producción. No se publicó nada ni se modificó un remoto.
 
 PUBLICAR EN UN SITIO AISLADO
@@ -46,14 +51,17 @@ El ejercicio sigue en memoria: reiniciar o recargar lo borra. Cerrar la app o qu
 Instalar no convierte esta maqueta en aplicación productiva, lector real, sistema de cobro ni comprobante fiscal.
 
 PRUEBAS DE ESTA ENTREGA
-27/27 comprobaciones estáticas: integridad del motor y recursos originales, hash CSP del script final, manifest, PNG, referencias y rutas tanto en raíz como en subcarpeta.
-48/48 comprobaciones de regresión en Node: campos opcionales, formatos ficticios, fechas válidas e inválidas, guardado, confirmación, navegación, bloqueo tras pago y reinicio; asignación previa y segunda lectura exigidas para ingreso; responsiva PLAY/CARE y su limpieza; consumo adulto, kit, actividad/alerta/salida, retiros individuales, pago manual, cancelación, nota y llamada de impresión.
-Estas pruebas no son un navegador real ni una instalación física. Chromium no pudo arrancar por restricciones del entorno de prueba. No se validó la barra oculta en Redmi/tablet, instalación WebAPK, despliegue HTTPS ni impresión física. La aceptación debe hacerse después de publicar.
-Las 74 pruebas mencionadas en LEEME_V7_ORIGINAL.txt pertenecen a la entrega V7 anterior; no se presentan como repetidas aquí. Ese archivo es histórico: las instrucciones actuales de este LEEME prevalecen.
+48/48 regresiones de flujo en Node: registro/contactos/fechas, formatos ficticios, guardado, confirmación, navegación, bloqueo tras pago y reinicio; asignación previa y segunda lectura; responsiva PLAY/CARE; consumo adulto, kit, actividad/alerta/salida, retiros, pago manual, cancelación, nota y llamada de impresión.
+6/6 pruebas de desplazamiento horizontal del botón activo: visible, fuera de cada borde, sin desbordamiento, sin barra y límites de desplazamiento. No se usa desplazamiento vertical de página.
+38/38 comprobaciones estáticas de diseño: cascada CSS a 320, 390, 560, 768, 800, 900, 901, 1024, 1280 y 1366 px; una fila sin salto, botones de 48 px sin encogerse, logos acotados, foco visible, scrollbar, impresión y cambios limitados de JavaScript.
+27/27 comprobaciones estáticas de integridad: motor, recursos, CSP final, manifest, PNG y rutas de despliegue.
+Son 119 comprobaciones automatizadas. Las de diseño analizan reglas CSS; no son mediciones renderizadas ni una instalación Android. No pudo completarse la revisión visual: el navegador de prueba dejó de responder. La instalación física, el despliegue HTTPS, el aspecto final en la tablet y la impresión física siguen pendientes.
+Las 74 pruebas mencionadas en LEEME_V7_ORIGINAL.txt pertenecen a V7 anterior; no se presentan como repetidas aquí. Ese archivo es histórico: las instrucciones actuales prevalecen.
 
 ACEPTACIÓN RÁPIDA EN LA TABLET
 - Desde Chrome instala y abre el icono Pápalos SIM; comprueba que no haya barra de direcciones.
-- Revisa ambos logos y el catálogo. Prueba orientación vertical y horizontal.
+- Revisa ambos logos y la cabecera en orientación vertical y horizontal. Debe haber una sola fila de módulos. Deslízala hasta Cuenta y vuelve a Registro; el módulo activo debe seguir visible.
+- Comprueba que los controles no se corten y que el catálogo se vea igual.
 - En Registro, practica teléfono TEL-FICTICIO-001, correo visita@example.invalid y dos fechas inventadas. Guarda y vuelve al módulo para comprobarlos.
 - Asigna pulseras; confirma que no se puede ingresar sin la segunda lectura y responsiva, y que otra persona no hereda ni la lectura ni la casilla.
 - Elige CARE y escribe el adulto alternativo ficticio. Comprueba luego que Retiro dice «Autorización no establecida».

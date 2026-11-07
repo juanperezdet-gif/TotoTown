@@ -1,35 +1,6 @@
-PÁPALOS V7 INSTALABLE REGISTRO-1 · VERIFICACIÓN 2026-11-07
+PÁPALOS V7 TABLETA COMPACTA-1 · VERIFICACIÓN 2026-11-07
 
-27/27 comprobaciones estáticas + 48/48 regresiones Node.
-
-PASS Original calculation and business engine byte-for-byte identical
-PASS Original styles byte-for-byte identical
-PASS Original bootstrap markup outside script unchanged
-PASS All 67 original brand/catalogue image files byte-identical
-PASS Original source ZIP unchanged
-PASS CSP updated script hash is valid
-PASS CSP changes limited to same-origin manifest and exact script hash
-PASS Data connections remain blocked
-PASS Manifest linked once
-PASS Standalone display requested
-PASS Name and short name supplied
-PASS Stable ID, relative scope and start URL
-PASS No store app redirect
-PASS Valid PNG icon 192x192 any
-PASS Valid PNG icon 512x512 any
-PASS Valid PNG icon 512x512 maskable
-PASS Required any icons 192 and 512 present
-PASS Dedicated maskable icon supplied
-PASS Apple touch icon valid 180px
-PASS Scope contains start URL at https://example.test/
-PASS Icon paths stay inside deployment at https://example.test/
-PASS Scope contains start URL at https://example.test/papalos-simulador/
-PASS Icon paths stay inside deployment at https://example.test/papalos-simulador/
-PASS Literal local HTML asset references exist
-PASS No service worker or durable persistence added
-PASS Wristband assignment function unchanged
-PASS Manifest and installation identity unchanged from PWA-1
-TOTAL 27/27 static checks passed
+48 flujo + 6 desplazamiento + 38 diseño estático + 27 integridad = 119 comprobaciones aprobadas.
 
 PASS Compiled V7 script runs and renders registration
 PASS Four added fields are optional and initially blank
@@ -81,14 +52,90 @@ PASS Reset also removes saved contact and birth dates
 PASS Catalogue remains 66 products
 TOTAL 48/48 passed; Node event/model simulation only, not physical/browser installation.
 
-MÉTODO Y LÍMITES
-Se ejecutó el script inline final en Node y se probaron sus eventos contra un contenedor DOM simulado. Esto no es una instalación Android ni validación visual en un navegador. El código del motor, catálogo y cálculos se conserva idéntico a V7; la interfaz y su hash CSP cambiaron intencionalmente.
-Pendiente: publicación HTTPS, instalación física Android/Chrome, apertura standalone sin barra, visualización real de tablet y diálogo de impresión. Chromium local no pudo iniciarse por restricciones de sockets del entorno. No se declara que esas pruebas hayan pasado.
+PASS Rightmost active button becomes visible inside horizontal nav
+PASS Left-clipped active button becomes visible inside horizontal nav
+PASS Visible active button does not move horizontal nav
+PASS Non-overflowing nav does not scroll
+PASS No navigation element is a safe no-op
+PASS Scroll remains within navigation bounds
+TOTAL 6/6 horizontal navigation unit tests; no viewport scrolling API used.
 
-REFERENCIA DE CAMPOS NUEVOS
-Se inspeccionó PAPALOS_S27_REGISTRATION_SIGNED_UI_LOCAL_HOLD_20261107.zip: core/modules/variable-registration/draft-contract.mjs y ui/draft-fields.mjs. Se verificó la misma referencia en vendor/s27 de PAPALOS_S29_SHARED_REGISTRATION_UI_LOCAL_HOLD_20261107.zip. Los cuatro campos son opcionales, el correo exige .invalid, teléfono exige TEL-FICTICIO-, y nacimiento valida calendario. Campos obligatorios de negocio y regla de fechas futuras siguen sin resolución; esta copia no los inventa. No se afirma paridad total ni autorización de retiro real.
+PASS 320px: single horizontal scrollable row
+PASS 320px: non-shrinking 48px targets and unbroken labels
+PASS 320px: compact logos and full-width navigation
+PASS 390px: single horizontal scrollable row
+PASS 390px: non-shrinking 48px targets and unbroken labels
+PASS 390px: compact logos and full-width navigation
+PASS 560px: single horizontal scrollable row
+PASS 560px: non-shrinking 48px targets and unbroken labels
+PASS 560px: compact logos and full-width navigation
+PASS 768px: single horizontal scrollable row
+PASS 768px: non-shrinking 48px targets and unbroken labels
+PASS 768px: compact logos and full-width navigation
+PASS 800px: single horizontal scrollable row
+PASS 800px: non-shrinking 48px targets and unbroken labels
+PASS 800px: compact logos and full-width navigation
+PASS 900px: single horizontal scrollable row
+PASS 900px: non-shrinking 48px targets and unbroken labels
+PASS 900px: compact logos and full-width navigation
+PASS 901px: single horizontal scrollable row
+PASS 901px: non-shrinking 48px targets and unbroken labels
+PASS 901px: compact logos and full-width navigation
+PASS 1024px: single horizontal scrollable row
+PASS 1024px: non-shrinking 48px targets and unbroken labels
+PASS 1024px: compact logos and full-width navigation
+PASS 1280px: single horizontal scrollable row
+PASS 1280px: non-shrinking 48px targets and unbroken labels
+PASS 1280px: compact logos and full-width navigation
+PASS 1366px: single horizontal scrollable row
+PASS 1366px: non-shrinking 48px targets and unbroken labels
+PASS 1366px: compact logos and full-width navigation
+PASS Print still hides header
+PASS Touch scroll hint exists below 1100px
+PASS Horizontal scrollbar is styled, not hidden
+PASS Focus outlines have 7px+ internal padding
+PASS Only JavaScript change is horizontal active-navigation visibility
+PASS Final CSP script hash valid
+PASS All prior styles preserved; final overrides scoped to screen
+PASS Manifest and icon files unchanged
+TOTAL 38/38 static layout checks; CSS cascade analysis, not rendered browser measurements.
 
-INTEGRIDAD
-Original V7 ZIP SHA-256: fb2256e1e42dee2b8296a6898ea6305d692061e5b9f5d86b0e34a0df5af7caa5
-Script inline final SHA-256 base64: bpbQC3d6Zk70zhfrkA9NX5ejwWsP5xPYEzpB/JMiVMc=
-No se publicó, modificó ni conectó producción, TEST o datos reales.
+PASS Original calculation and business engine byte-for-byte identical
+PASS Original styles preserved beneath scoped compact-header overrides
+PASS Original bootstrap markup outside script unchanged
+PASS All 67 original brand/catalogue image files byte-identical
+PASS Original source ZIP unchanged
+PASS CSP updated script hash is valid
+PASS CSP changes limited to same-origin manifest and exact script hash
+PASS Data connections remain blocked
+PASS Manifest linked once
+PASS Standalone display requested
+PASS Name and short name supplied
+PASS Stable ID, relative scope and start URL
+PASS No store app redirect
+PASS Valid PNG icon 192x192 any
+PASS Valid PNG icon 512x512 any
+PASS Valid PNG icon 512x512 maskable
+PASS Required any icons 192 and 512 present
+PASS Dedicated maskable icon supplied
+PASS Apple touch icon valid 180px
+PASS Scope contains start URL at https://example.test/
+PASS Icon paths stay inside deployment at https://example.test/
+PASS Scope contains start URL at https://example.test/papalos-simulador/
+PASS Icon paths stay inside deployment at https://example.test/papalos-simulador/
+PASS Literal local HTML asset references exist
+PASS No service worker or durable persistence added
+PASS Wristband assignment function unchanged
+PASS Manifest and installation identity unchanged from PWA-1
+TOTAL 27/27 static checks passed
+
+
+LÍMITES
+Node ejecuta el script final con un contenedor DOM simulado. El análisis de diseño evalúa la cascada de CSS, no produce mediciones de un navegador real. El navegador de prueba dejó de responder; no se pudo completar la inspección visual. Se debe comprobar en la tablet después de publicar, incluyendo scroll, orientación, controles y apertura standalone. No hay prueba de instalación ni impresión física.
+
+ALCANCE
+El único cambio nuevo de JavaScript respecto de REGISTRO-1 mantiene visible el módulo activo dentro de la barra horizontal. No usa scrollIntoView ni desplaza la página. Se conservan los campos ficticios, sus validaciones, CARE, la primera asignación, segunda lectura y responsiva para ingreso, y toda la lógica comercial del simulador. Manifest e imágenes se conservan byte a byte.
+S27/S29 no contienen estilos de cabecera comparables: no se afirma paridad visual con la aplicación operativa. Los contratos de los campos ficticios ya habían sido cotejados.
+No se publicó ni modificó producción, TEST, datos reales o un remoto.
+
+SHA-256 base64 del script final: qaO0+mq25oDr0a4e/NukjmYr4KmA5C8+nHN97bNZhKA=
