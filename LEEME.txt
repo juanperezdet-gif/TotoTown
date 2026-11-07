@@ -1,10 +1,26 @@
-PÁPALOS · SIMULADOR V7 INSTALABLE · PWA-1 · 7 NOV 2026
+PÁPALOS · SIMULADOR V7 INSTALABLE · REGISTRO-1 · 7 NOV 2026
 Copia independiente de capacitación con datos ficticios.
 No es la aplicación operativa ni el TEST integrado.
 
-QUÉ CAMBIÓ
-Se añadió instalación como aplicación web con display=standalone, manifest e iconos P/SIM para Android Chrome. El JavaScript, estilos, cuerpo de la página y los 67 archivos originales de imágenes son idénticos a V7. Los 66 productos, precios y recorridos se conservan. No se publicó nada ni se modificó un remoto.
-La política de contenido sólo añade permiso para leer el manifest del mismo sitio. Las conexiones de datos continúan bloqueadas. No se añadieron service workers, cuentas, almacenamiento del ejercicio, permisos del dispositivo ni conexión a producción.
+QUÉ CAMBIÓ EN ESTA COPIA · REGISTRO-1
+Esta entrega añade cuatro casillas opcionales en Registro: teléfono ficticio y correo ficticio del adulto, y fecha de nacimiento ficticia de cada menor. Empiezan vacías. Guarda con «Guardar datos ficticios» después de confirmar que todos los datos son inventados. Se conservan sólo en memoria de esta práctica y se borran al reiniciar o recargar.
+- Teléfono: TEL-FICTICIO-001 u otro identificador TEL-FICTICIO- seguido de letras, números o guiones, hasta 64 bytes. No acepta un número real.
+- Correo: visita@example.invalid u otro correo terminado en .invalid, hasta 254 bytes. No acepta dominios reales.
+- Fechas: una fecha de calendario válida, por ejemplo 2018-02-15 y 2020-03-11. No se calcula edad ni tarifa con ellas. No se añadió una regla comercial para fechas futuras.
+Estos formatos y su carácter opcional se verificaron contra el contrato de borrador S27 y la copia incorporada en S29. Eso no afirma equivalencia total con la aplicación real. Se conserva el requisito SIM de los nombres propio de este simulador. El registro familiar no añade parentesco ni autorización para recoger.
+
+DOS LECTURAS SEPARADAS, AHORA EXIGIDAS PARA INGRESAR
+1. En Registro, «Escanear» al lado de cada miembro asigna una sola vez X001, X002 o X003.
+2. En Ingreso, selecciona al menor y pulsa «Escanear simulado» para leer la pulsera ya asignada. Marca después la verificación de responsiva y registra el ingreso.
+El ingreso no se habilita sin asignación previa, lectura de ingreso del menor seleccionado y responsiva. Cambiar de menor o salir del módulo descarta la lectura pendiente, pero conserva la asignación. Releer también limpia la confirmación de responsiva. Guardar nombres y contactos antes de asignar es posible, pero no ingresa ni cobra.
+
+CARE · ADULTO ALTERNATIVO
+En Ingreso, al elegir CARE aparece «Adulto alternativo que podría recoger · nombre ficticio (opcional)», además del teléfono ficticio, parentesco declarado opcional y regreso estimado. Estos campos ya existían en V7; se aclaró la etiqueta del nombre. Ejemplo: Rita SIM, TEL-FICTICIO-002, Tía SIM.
+Se guardan para esa visita de práctica. En Retiro siguen apareciendo con «Autorización no establecida». Son una declaración informativa; no designan realmente a otro adulto ni modifican al responsable fijo, las verificaciones de retiro o una responsiva. El parentesco declarado no es un parentesco comprobado.
+
+QUÉ SE CONSERVÓ
+Se mantiene instalación standalone, manifest, iconos y rutas relativas. El motor de cálculo, catálogo, 66 productos, precios, estilos y los 67 archivos originales de imágenes no cambiaron. Se modificó la interfaz de Registro, la etiqueta CARE y la condición de lectura para Ingreso. El hash permitido por la política de contenido se actualizó para el script final exacto.
+Las conexiones de datos continúan bloqueadas. No se añadieron service workers, cuentas, almacenamiento duradero del ejercicio, permisos del dispositivo ni conexión a producción. No se publicó nada ni se modificó un remoto.
 
 PUBLICAR EN UN SITIO AISLADO
 1. Descomprime el ZIP y sube TODO su contenido: index.html, manifest.webmanifest, assets y .nojekyll deben conservar su ubicación. No subas únicamente el ZIP ni únicamente index.html.
@@ -30,15 +46,17 @@ El ejercicio sigue en memoria: reiniciar o recargar lo borra. Cerrar la app o qu
 Instalar no convierte esta maqueta en aplicación productiva, lector real, sistema de cobro ni comprobante fiscal.
 
 PRUEBAS DE ESTA ENTREGA
-25/25 comprobaciones estáticas: integridad contra el ZIP V7, CSP, manifest, PNG, referencias y rutas tanto en raíz como en subcarpeta.
-29/29 comprobaciones de regresión en Node: arranque del código compilado, lógica de eventos, responsiva PLAY/CARE y su limpieza, consumo adulto, kit, actividad/alerta/salida, retiros individuales, pago manual, cancelación, nota, llamada de impresión y reinicio.
-Estas pruebas no son un navegador real ni una instalación física. El intento de arrancar Chromium quedó bloqueado por restricciones del entorno de prueba. No se validó la barra oculta en Redmi/tablet, la instalación WebAPK, el despliegue HTTPS ni la impresión física. Esa aceptación debe hacerse después de publicar.
-Las 74 pruebas mencionadas en LEEME_V7_ORIGINAL.txt pertenecen a la entrega V7 anterior; no se presentan como repetidas aquí.
+27/27 comprobaciones estáticas: integridad del motor y recursos originales, hash CSP del script final, manifest, PNG, referencias y rutas tanto en raíz como en subcarpeta.
+48/48 comprobaciones de regresión en Node: campos opcionales, formatos ficticios, fechas válidas e inválidas, guardado, confirmación, navegación, bloqueo tras pago y reinicio; asignación previa y segunda lectura exigidas para ingreso; responsiva PLAY/CARE y su limpieza; consumo adulto, kit, actividad/alerta/salida, retiros individuales, pago manual, cancelación, nota y llamada de impresión.
+Estas pruebas no son un navegador real ni una instalación física. Chromium no pudo arrancar por restricciones del entorno de prueba. No se validó la barra oculta en Redmi/tablet, instalación WebAPK, despliegue HTTPS ni impresión física. La aceptación debe hacerse después de publicar.
+Las 74 pruebas mencionadas en LEEME_V7_ORIGINAL.txt pertenecen a la entrega V7 anterior; no se presentan como repetidas aquí. Ese archivo es histórico: las instrucciones actuales de este LEEME prevalecen.
 
 ACEPTACIÓN RÁPIDA EN LA TABLET
 - Desde Chrome instala y abre el icono Pápalos SIM; comprueba que no haya barra de direcciones.
 - Revisa ambos logos y el catálogo. Prueba orientación vertical y horizontal.
-- Asigna pulseras; confirma que no se puede ingresar sin verificar responsiva y que la segunda persona no hereda la casilla.
+- En Registro, practica teléfono TEL-FICTICIO-001, correo visita@example.invalid y dos fechas inventadas. Guarda y vuelve al módulo para comprobarlos.
+- Asigna pulseras; confirma que no se puede ingresar sin la segunda lectura y responsiva, y que otra persona no hereda ni la lectura ni la casilla.
+- Elige CARE y escribe el adulto alternativo ficticio. Comprueba luego que Retiro dice «Autorización no establecida».
 - Registra PLAY/CARE, un consumo ficticio, un kit y su actividad; avanza el reloj y confirma salida física.
 - Retira a cada menor, elige método manual, cancela una revisión de pago y luego confirma el pago simulado. Consulta la nota.
 - Reinicia sólo al terminar. Prueba cerrar y volver a abrir sabiendo que no se conserva el ejercicio.

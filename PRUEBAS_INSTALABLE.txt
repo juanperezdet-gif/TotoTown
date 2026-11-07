@@ -1,39 +1,94 @@
-PÁPALOS V7 INSTALABLE · VERIFICACIÓN 2026-11-07
+PÁPALOS V7 INSTALABLE REGISTRO-1 · VERIFICACIÓN 2026-11-07
 
-Estáticas: 25/25
-PASS · Original application JavaScript byte-for-byte identical
-PASS · Original styles byte-for-byte identical
-PASS · Original body byte-for-byte identical
-PASS · All 67 original brand/catalogue image files byte-identical
-PASS · Original source ZIP unchanged
-PASS · CSP original script hash is valid
-PASS · Only CSP change allows same-origin manifest
-PASS · Data connections remain blocked
-PASS · Manifest linked once
-PASS · Standalone display requested
-PASS · Name and short name supplied
-PASS · Stable ID, relative scope and start URL
-PASS · No store app redirect
-PASS · Valid PNG icon 192x192 any
-PASS · Valid PNG icon 512x512 any
-PASS · Valid PNG icon 512x512 maskable
-PASS · Required any icons 192 and 512 present
-PASS · Dedicated maskable icon supplied
-PASS · Apple touch icon valid 180px
-PASS · Scope contains start URL at https://example.test/
-PASS · Icon paths stay inside deployment at https://example.test/
-PASS · Scope contains start URL at https://example.test/papalos-simulador/
-PASS · Icon paths stay inside deployment at https://example.test/papalos-simulador/
-PASS · Literal local HTML asset references exist
-PASS · No service worker or new persistence added
+27/27 comprobaciones estáticas + 48/48 regresiones Node.
 
-Regresión Node: 29/29
-Se ejecutó exactamente el script inline de V7; una copia temporal de pruebas expuso el motor y la interfaz a un contenedor DOM simulado. No se modificó el script entregado.
+PASS Original calculation and business engine byte-for-byte identical
+PASS Original styles byte-for-byte identical
+PASS Original bootstrap markup outside script unchanged
+PASS All 67 original brand/catalogue image files byte-identical
+PASS Original source ZIP unchanged
+PASS CSP updated script hash is valid
+PASS CSP changes limited to same-origin manifest and exact script hash
+PASS Data connections remain blocked
+PASS Manifest linked once
+PASS Standalone display requested
+PASS Name and short name supplied
+PASS Stable ID, relative scope and start URL
+PASS No store app redirect
+PASS Valid PNG icon 192x192 any
+PASS Valid PNG icon 512x512 any
+PASS Valid PNG icon 512x512 maskable
+PASS Required any icons 192 and 512 present
+PASS Dedicated maskable icon supplied
+PASS Apple touch icon valid 180px
+PASS Scope contains start URL at https://example.test/
+PASS Icon paths stay inside deployment at https://example.test/
+PASS Scope contains start URL at https://example.test/papalos-simulador/
+PASS Icon paths stay inside deployment at https://example.test/papalos-simulador/
+PASS Literal local HTML asset references exist
+PASS No service worker or durable persistence added
+PASS Wristband assignment function unchanged
+PASS Manifest and installation identity unchanged from PWA-1
+TOTAL 27/27 static checks passed
 
-Cobertura: arranque, asignación de pulseras, responsiva por persona y modalidad, limpieza al navegar/releer/cambiar persona, PLAY/CARE, detalles CARE ficticios, confirmación de consumo, adulto sin tarifa de menor, kit separado de inicio, Nanita, alerta a 45 minutos sin liberar lugar, cancelar y confirmar salida física, retiros individuales con verificaciones independientes, método manual no preseleccionado, cancelar y confirmar pago simulado, nota/llamada de impresión sin duplicar pago, cancelar/confirmar reinicio y 66 productos.
+PASS Compiled V7 script runs and renders registration
+PASS Four added fields are optional and initially blank
+PASS Blank optional details can be saved
+PASS Every edit clears fictitious-data confirmation
+PASS Valid synthetic contact and two birthdays save
+PASS Contact and birth dates create no visit, charge or authorization
+PASS Saved details persist across module navigation
+PASS Real-looking numeric phone rejected without overwriting saved contact
+PASS Non-synthetic email rejected
+PASS Impossible calendar date rejected
+PASS Valid leap date accepted
+PASS Year zero rejected like S27
+PASS Phone length limit enforced beyond browser maxlength
+PASS Entry requires prior assignment even with waiver checked
+PASS Three wristbands assigned, no visit created
+PASS Assignment alone cannot enter without second reading
+PASS PLAY entry blocked without waiver
+PASS PLAY entry enabled with waiver
+PASS Changing mode clears waiver
+PASS Changing module clears waiver
+PASS Leaving entry discards previous entry reading
+PASS Rereading clears waiver
+PASS Changing person clears waiver
+PASS PLAY entry recorded once
+PASS Changing child cannot reuse the first child entry reading
+PASS CARE has independent required waiver
+PASS CARE alternative adult fields are visible and optional
+PASS CARE entry with optional synthetic details
+PASS Consumption blocked until explicitly confirmed
+PASS Adult consumption recorded without adult timed visit
+PASS Kit assigned pending, no activity auto-start
+PASS Nanita activity started
+PASS 45-minute alert does not release place
+PASS Cancel departure keeps place occupied
+PASS Confirmed physical departure releases activity place
+PASS CARE details are explicitly not withdrawal authorization
+PASS CARE child withdrawn individually
+PASS Second child does not inherit withdrawal checks
+PASS Both children withdrawn individually
+PASS Payment method initially blank
+PASS Cancel payment causes no payment
+PASS Payment is synthetic and closes account
+PASS Registration fields lock after payment
+PASS Read note and print do not charge again
+PASS Cancel reset preserves exercise
+PASS Confirmed reset clears exercise
+PASS Reset also removes saved contact and birth dates
+PASS Catalogue remains 66 products
+TOTAL 48/48 passed; Node event/model simulation only, not physical/browser installation.
 
+MÉTODO Y LÍMITES
+Se ejecutó el script inline final en Node y se probaron sus eventos contra un contenedor DOM simulado. Esto no es una instalación Android ni validación visual en un navegador. El código del motor, catálogo y cálculos se conserva idéntico a V7; la interfaz y su hash CSP cambiaron intencionalmente.
 Pendiente: publicación HTTPS, instalación física Android/Chrome, apertura standalone sin barra, visualización real de tablet y diálogo de impresión. Chromium local no pudo iniciarse por restricciones de sockets del entorno. No se declara que esas pruebas hayan pasado.
 
-Original ZIP SHA-256: fb2256e1e42dee2b8296a6898ea6305d692061e5b9f5d86b0e34a0df5af7caa5
-Script inline SHA-256 base64 conservado: 0BxGo9XeAJcTLWFaI97Q77lFQKeGnJ7pXzJjvjq5k3o=
+REFERENCIA DE CAMPOS NUEVOS
+Se inspeccionó PAPALOS_S27_REGISTRATION_SIGNED_UI_LOCAL_HOLD_20261107.zip: core/modules/variable-registration/draft-contract.mjs y ui/draft-fields.mjs. Se verificó la misma referencia en vendor/s27 de PAPALOS_S29_SHARED_REGISTRATION_UI_LOCAL_HOLD_20261107.zip. Los cuatro campos son opcionales, el correo exige .invalid, teléfono exige TEL-FICTICIO-, y nacimiento valida calendario. Campos obligatorios de negocio y regla de fechas futuras siguen sin resolución; esta copia no los inventa. No se afirma paridad total ni autorización de retiro real.
+
+INTEGRIDAD
+Original V7 ZIP SHA-256: fb2256e1e42dee2b8296a6898ea6305d692061e5b9f5d86b0e34a0df5af7caa5
+Script inline final SHA-256 base64: bpbQC3d6Zk70zhfrkA9NX5ejwWsP5xPYEzpB/JMiVMc=
 No se publicó, modificó ni conectó producción, TEST o datos reales.
