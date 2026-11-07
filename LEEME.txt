@@ -1,42 +1,56 @@
-PÁPALOS · SIMULADOR DE CAPACITACIÓN V7
-Maqueta con datos ficticios. No es la aplicación operativa ni el TEST integrado.
+PÁPALOS · SIMULADOR V7 INSTALABLE · PWA-1 · 7 NOV 2026
+Copia independiente de capacitación con datos ficticios.
+No es la aplicación operativa ni el TEST integrado.
 
-ABRIR Y PUBLICAR
-Descomprime todo el ZIP. Conserva index.html y la carpeta assets en el mismo nivel: las imágenes ya no están dentro del HTML. Para prueba local, abre index.html en un navegador moderno sin moverlo de esa carpeta. Si el navegador limita archivos locales, usa el enlace de GitHub Pages una vez publicado.
-Para GitHub Pages, sube TODO el contenido descomprimido, incluidos assets y .nojekyll, a un repositorio nuevo o carpeta aislada para este simulador. No subas sólo el ZIP ni sólo index.html. No sustituyas JP Fitness, TEST ni la aplicación real. Configura la rama/carpeta en Settings > Pages y espera el enlace que confirme GitHub. Abre ese enlace, no la vista del archivo en github.com.
-El index.html pesa aproximadamente 197 KB; las imágenes están separadas para cargarse al mostrarse. El paquete conserva los originales, por lo que la primera carga de las ilustraciones necesita más datos. No necesita instalación, base de datos, claves ni contraseñas.
-Si el sitio es público, otras personas podrán abrirlo. Usa únicamente datos inventados. No publicamos esta entrega ni modificamos ningún remoto. En la Redmi prueba con Chrome actualizado si está disponible; en iPad, Safari. La publicación y las pruebas físicas siguen pendientes.
+QUÉ CAMBIÓ
+Se añadió instalación como aplicación web con display=standalone, manifest e iconos P/SIM para Android Chrome. El JavaScript, estilos, cuerpo de la página y los 67 archivos originales de imágenes son idénticos a V7. Los 66 productos, precios y recorridos se conservan. No se publicó nada ni se modificó un remoto.
+La política de contenido sólo añade permiso para leer el manifest del mismo sitio. Las conexiones de datos continúan bloqueadas. No se añadieron service workers, cuentas, almacenamiento del ejercicio, permisos del dispositivo ni conexión a producción.
 
-RECORRIDO DE CAPACITACIÓN
-1. Registro: escribe nombres inventados, conservando SIM. Sólo hay un Escanear al lado de cada miembro: al pulsarlo asigna X001, X002 o X003 y queda Asignada. No hay selector ni escáner global duplicado en Registro. Confirma que los nombres son ficticios y guarda.
-2. Ingreso: selecciona al menor, pulsa Escanear simulado para leer su pulsera ya asignada y elige PLAY o CARE en Modalidad inicial. Antes de registrar el ingreso, Recepción debe verificar la responsiva física llenada y firmada correspondiente a ese menor y marcar la casilla obligatoria. En esta maqueta se practica con un documento ficticio: la casilla no sustituye el documento ni su firma. Al cambiar de menor, modalidad, módulo o releer la pulsera, la confirmación pendiente se limpia. Cada ingreso requiere su propia verificación. Leer no ingresa ni cobra. La modalidad queda fija en esta visita.
-3. CARE: aparecen vacíos regreso estimado, persona alternativa para recoger, teléfono ficticio y parentesco. Son opcionales. Usa únicamente datos inventados, por ejemplo Rita SIM, 0000000000 y Tía SIM. La estimación, si se llena, debe ser un entero positivo y no cambia tarifa ni tiempo real. Se usan los límites técnicos del formulario existente, no nuevas reglas comerciales. Los datos se conservan sólo para esa visita de práctica y se limpian con Reiniciar.
-   Llenar los campos NO autoriza a esa persona a recoger. En Retiro aparecen como información con «Autorización no establecida»; no marcan casillas ni sustituyen al responsable fijo Alex SIM. Esta maqueta no simula una designación real ni el retiro por el adulto alternativo.
-4. Dulcería: selecciona la PERSONA y lee la pulsera ya asignada. Sin cámara, la maqueta no puede inferir quién está enfrente: usa la persona seleccionada. Si no tiene asignación, vuelve a Registro.
-   Consumo ordinario separa Cafetería, Panes y Restaurante como el candidato local. La búsqueda se limita a la categoría actual. Elige producto, cantidad y marca la confirmación de persona, familia, producto e importe antes de registrar. Cambiar persona, cantidad, producto, categoría, sección o reescanear descarta la confirmación anterior.
-   El adulto puede consumir alimentos y bebidas, sin cronómetro ni tarifa de menor en este ejercicio. Eso no define su regla comercial real.
-5. Actividades · entrega de kit: es una sección separada de Dulcería, con seis actividades y cantidad1. Elige al menor, el kit y confirma su entrega física simulada. Entregar no inicia la actividad ni reserva lugar.
-6. Nanita: inicia la actividad por separado. Usa +15min para avanzar el reloj de práctica. A los45min hay alerta, pero el lugar continúa ocupado hasta confirmar salida física. No hay reingreso en esta maqueta.
-7. Retiro: revisa a cada menor, el responsable y las tres verificaciones. Si hay kit pendiente o actividad ocupada, no puedes retirarlo. El contacto CARE declarado no acredita autorización. Retira a cada menor por separado; pagar o imprimir no lo sustituye.
-8. Cuenta/Caja: revisa los importes familiares. Elige expresamente efectivo o tarjeta en Método manual de prueba; no hay método preseleccionado. Revisa y confirma el pago simulado. Consulta la nota y, si hace falta, usa Imprimir por separado. No se cobra dinero ni se duplica el pago por imprimir.
-9. Reiniciar, recargar o cerrar la pestaña borra el ejercicio. Cada pestaña y dispositivo trabaja de forma independiente, sin sincronización.
+PUBLICAR EN UN SITIO AISLADO
+1. Descomprime el ZIP y sube TODO su contenido: index.html, manifest.webmanifest, assets y .nojekyll deben conservar su ubicación. No subas únicamente el ZIP ni únicamente index.html.
+2. Usa el repositorio o proyecto exclusivo del SIMULADOR. No reemplaces JP Fitness, TEST ni la aplicación operativa. Si ya publicaste V7 como simulador independiente, sustituye allí los archivos del simulador con este paquete completo.
+3. GitHub Pages: publica la rama/carpeta que contiene index.html en Settings > Pages. Abre la URL HTTPS que confirme GitHub, no la vista del archivo en github.com.
+4. Vercel: sirve este contenido como sitio estático, con la carpeta que contiene index.html como raíz del sitio. No necesita compilación ni dependencias. Conserva manifest y assets en esa misma raíz.
+5. Comprueba en la URL final que carga el simulador y que /manifest.webmanifest dentro de su carpeta devuelve JSON, no una pantalla de login, error o redirección a otra aplicación. Las rutas relativas sirven tanto en la raíz del dominio como bajo /nombre-del-repositorio/.
 
+INSTALAR EN ANDROID CHROME
+1. Con Internet, abre la URL HTTPS publicada en Chrome actualizado, fuera de incógnito. No uses la vista interna de WhatsApp, Gmail o ChatGPT, ni un archivo local.
+2. Espera a que cargue. Menú de Chrome (tres puntos) > Agregar a pantalla principal o Instalar aplicación. Si aparece una elección, elige Instalar, no sólo Crear acceso directo. El texto exacto varía según la versión.
+3. Finaliza la instalación y abre Pápalos SIM desde su icono nuevo. Ésta es la apertura que solicita la ventana independiente sin barra de direcciones ni pestañas de Chrome. Abrir otra vez el enlace dentro de Chrome sigue siendo una pestaña normal.
+4. Si ya habías creado un acceso directo a V7 que abre una pestaña, termina el ejercicio, retira ese acceso directo antiguo de la pantalla de inicio y vuelve a instalar desde la URL actualizada. No hace falta borrar datos del navegador.
+5. Si sólo ofrece un acceso directo, verifica Chrome actualizado, HTTPS, manifest/iconos accesibles y que no estés en incógnito o un navegador interno. La instalación también puede depender de políticas del dispositivo y de la versión de Android/Chrome. No se puede forzar desde la página.
 
-CAMBIOS V7
-- 66 productos con imagen: conserva las 59 anteriores y cubre las 7 pendientes mediante seis ilustraciones generadas y la reutilización de una imagen de burrito. Son 65 archivos de producto únicos.
-- Avisos visibles: las ilustraciones no son fotos del producto real ni definen receta, ingredientes o porción. La pizza es genérica; el burrito reutilizado no confirma relleno. Mega nacho C/P mantiene «Nombre/variante por confirmar».
-- Los avisos de imagen conviven con el nombre original cuando hay etiqueta propuesta. No se modificaron IDs, precios, nombres canónicos, asignación de cargos ni cálculo de la cuenta.
-- Casilla obligatoria de responsiva física antes de cada ingreso PLAY/CARE. Conserva la constancia sólo durante esta práctica; no sube, firma ni reemplaza documentos y no autoriza retiro.
-- Conserva los cambios V6: Registro sin doble escaneo, nombres coherentes, adulto consumidor sin tarifa de menor, botones activos morados, grupos de catálogo y kits separados, confirmación de consumo, CARE ficticio por visita, pago manual sin método preseleccionado y nota/impresión separadas.
+QUÉ SIGNIFICA «SIN BARRA»
+Standalone solicita ocultar la interfaz del navegador cuando se abre la app instalada. No es modo kiosco: no impide salir, cambiar aplicaciones o usar los controles de Android, y pueden seguir visibles la barra de estado y la navegación del sistema. Abrir una URL fuera del ámbito del simulador puede volver a mostrar interfaz del navegador.
+No se añadieron botones, avisos de instalación ni cambios al recorrido del simulador. No se promete un aviso automático de instalación; usa el menú de Chrome.
 
-FIDELIDAD Y LÍMITES
-V7 sigue las fuentes de un candidato operativo local, no una pantalla definitiva ya desplegada. Cabecera: Pápalos izquierda, Toto Town by bowling centro y navegación derecha, adaptada en pantallas estrechas. Logos, estilos y etiquetas propuestas permanecen iguales a V6. Las imágenes nuevas y la casilla de responsiva se incorporaron aquí; esto no confirma que ya estén integradas en la aplicación operativa.
-La familia contiene dos menores y un adulto. Los roles son libres; el reloj avanza con +15 min. No hay sesión, lector real, cámara, servidor, base de datos, seguridad productiva, sincronización entre dispositivos ni recuperación de sesión. La identificación fuera de Registro es una lectura simulada según la persona elegida; no reconoce a quien está delante. La modalidad inicial aparece sugerida por menor. El registro operativo variable, permisos y conciliación de intentos no se reproducen.
-CARE alternativo es una declaración opcional de práctica, no autorización para recoger. Retiro utiliza el responsable fijo y un checklist didáctico. La casilla de responsiva es una comprobación de Recepción en esta interfaz, no evidencia legal ni un control de seguridad productivo. Los datos se borran al reiniciar, cerrar o recargar.
-No incluye fiesta, cambio PLAY/CARE durante visita, propinas, reingreso Nanita, devoluciones, correcciones de consumos ni cancelación de kits. Catálogo de práctica, no confirmación de catálogo productivo definitivo. Nota e impresión no fiscales.
+LÍMITES QUE SIGUEN IGUALES
+Necesita conexión para cargar. No se añadió funcionamiento offline ni caché de aplicación. Chrome Android 108+ permite instalación desde su menú sin service worker; se recomienda una versión actualizada.
+El ejercicio sigue en memoria: reiniciar o recargar lo borra. Cerrar la app o que Android libere su proceso también puede perderlo. No hay recuperación de sesión ni sincronización entre dispositivos. Usa sólo datos inventados.
+Instalar no convierte esta maqueta en aplicación productiva, lector real, sistema de cobro ni comprobante fiscal.
 
-VERIFICACIÓN Y PRUEBA RECOMENDADA
-74/74 pruebas automáticas pasan sobre motor, interfaz, contraste, imágenes y compilados. Incluyen que PLAY/CARE no ingresen sin marcar responsiva, que cambiar de persona/modalidad/módulo o leer la pulsera limpie la confirmación, que la casilla no permita duplicar ingreso y que el archivo compilado de GitHub aplique el bloqueo. Los 66 IDs y precios se conservan; seis PNG coinciden con sus hashes autorizados y el burrito comparte el archivo esperado.
-Chrome cloud cargó la versión ligera y mostró las nuevas tarjetas de tortas, nachos, plato mixto y burrito con sus advertencias. La revisión visual final de la casilla y los tamaños teléfono/tablet quedó bloqueada por timeouts del navegador de prueba. No se afirma aceptación física en Redmi/iPad ni prueba de impresión V7. El formulario de V6 sí se había renderizado en 390/800 px; no sustituye probar esta versión final.
-Antes de capacitación: comprobar en el enlace publicado que ambos logos y la pizza se vean; que Agregar consumo esté morado al estar habilitado; que Ingresar permanezca deshabilitado sin responsiva; marcarla, ingresar, registrar consumo, avanzar el reloj, retirar a cada menor, pagar ficticiamente y consultar la nota. Probar una segunda persona y confirmar que no herede la casilla anterior. Recargar sólo cuando quieras reiniciar.
-La aplicación no envía el ejercicio: bloquea conexiones de datos y sólo carga sus imágenes desde el mismo sitio. El anfitrión puede registrar las solicitudes normales de página e imágenes. Nada se publicó ni se modificó en TEST o producción. V6 permanece intacta.
+PRUEBAS DE ESTA ENTREGA
+25/25 comprobaciones estáticas: integridad contra el ZIP V7, CSP, manifest, PNG, referencias y rutas tanto en raíz como en subcarpeta.
+29/29 comprobaciones de regresión en Node: arranque del código compilado, lógica de eventos, responsiva PLAY/CARE y su limpieza, consumo adulto, kit, actividad/alerta/salida, retiros individuales, pago manual, cancelación, nota, llamada de impresión y reinicio.
+Estas pruebas no son un navegador real ni una instalación física. El intento de arrancar Chromium quedó bloqueado por restricciones del entorno de prueba. No se validó la barra oculta en Redmi/tablet, la instalación WebAPK, el despliegue HTTPS ni la impresión física. Esa aceptación debe hacerse después de publicar.
+Las 74 pruebas mencionadas en LEEME_V7_ORIGINAL.txt pertenecen a la entrega V7 anterior; no se presentan como repetidas aquí.
+
+ACEPTACIÓN RÁPIDA EN LA TABLET
+- Desde Chrome instala y abre el icono Pápalos SIM; comprueba que no haya barra de direcciones.
+- Revisa ambos logos y el catálogo. Prueba orientación vertical y horizontal.
+- Asigna pulseras; confirma que no se puede ingresar sin verificar responsiva y que la segunda persona no hereda la casilla.
+- Registra PLAY/CARE, un consumo ficticio, un kit y su actividad; avanza el reloj y confirma salida física.
+- Retira a cada menor, elige método manual, cancela una revisión de pago y luego confirma el pago simulado. Consulta la nota.
+- Reinicia sólo al terminar. Prueba cerrar y volver a abrir sabiendo que no se conserva el ejercicio.
+Si aparece un resultado incierto o una imagen no carga, detén la capacitación y conserva el mensaje o una captura para revisión.
+
+RECORRIDO Y LÍMITES ORIGINALES
+LEEME_V7_ORIGINAL.txt conserva la descripción íntegra de V7 para consulta.
+PRUEBAS_INSTALABLE.txt enumera las comprobaciones de esta copia.
+SHA256SUMS.txt permite verificar los archivos del paquete (no se incluye a sí mismo).
+
+REFERENCIAS TÉCNICAS
+Chrome, instalación desde menú sin service worker:
+https://developer.chrome.com/blog/update-install-criteria
+Instalación de aplicaciones web:
+https://web.dev/learn/pwa/installation

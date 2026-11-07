@@ -1,0 +1,39 @@
+PÁPALOS V7 INSTALABLE · VERIFICACIÓN 2026-11-07
+
+Estáticas: 25/25
+PASS · Original application JavaScript byte-for-byte identical
+PASS · Original styles byte-for-byte identical
+PASS · Original body byte-for-byte identical
+PASS · All 67 original brand/catalogue image files byte-identical
+PASS · Original source ZIP unchanged
+PASS · CSP original script hash is valid
+PASS · Only CSP change allows same-origin manifest
+PASS · Data connections remain blocked
+PASS · Manifest linked once
+PASS · Standalone display requested
+PASS · Name and short name supplied
+PASS · Stable ID, relative scope and start URL
+PASS · No store app redirect
+PASS · Valid PNG icon 192x192 any
+PASS · Valid PNG icon 512x512 any
+PASS · Valid PNG icon 512x512 maskable
+PASS · Required any icons 192 and 512 present
+PASS · Dedicated maskable icon supplied
+PASS · Apple touch icon valid 180px
+PASS · Scope contains start URL at https://example.test/
+PASS · Icon paths stay inside deployment at https://example.test/
+PASS · Scope contains start URL at https://example.test/papalos-simulador/
+PASS · Icon paths stay inside deployment at https://example.test/papalos-simulador/
+PASS · Literal local HTML asset references exist
+PASS · No service worker or new persistence added
+
+Regresión Node: 29/29
+Se ejecutó exactamente el script inline de V7; una copia temporal de pruebas expuso el motor y la interfaz a un contenedor DOM simulado. No se modificó el script entregado.
+
+Cobertura: arranque, asignación de pulseras, responsiva por persona y modalidad, limpieza al navegar/releer/cambiar persona, PLAY/CARE, detalles CARE ficticios, confirmación de consumo, adulto sin tarifa de menor, kit separado de inicio, Nanita, alerta a 45 minutos sin liberar lugar, cancelar y confirmar salida física, retiros individuales con verificaciones independientes, método manual no preseleccionado, cancelar y confirmar pago simulado, nota/llamada de impresión sin duplicar pago, cancelar/confirmar reinicio y 66 productos.
+
+Pendiente: publicación HTTPS, instalación física Android/Chrome, apertura standalone sin barra, visualización real de tablet y diálogo de impresión. Chromium local no pudo iniciarse por restricciones de sockets del entorno. No se declara que esas pruebas hayan pasado.
+
+Original ZIP SHA-256: fb2256e1e42dee2b8296a6898ea6305d692061e5b9f5d86b0e34a0df5af7caa5
+Script inline SHA-256 base64 conservado: 0BxGo9XeAJcTLWFaI97Q77lFQKeGnJ7pXzJjvjq5k3o=
+No se publicó, modificó ni conectó producción, TEST o datos reales.
